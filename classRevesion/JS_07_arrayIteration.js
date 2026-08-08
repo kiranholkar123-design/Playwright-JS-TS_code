@@ -42,3 +42,12 @@ console.log(Array.isArray(result));
 
 
 
+console.log('====================');
+let sArr = [2,3,4,5,6,7]
+for (let a in sArr){
+    console.log(`${a}: ${sArr[a]}`);
+}
+
+let squareArr = sArr.map(e => e * e);
+console.log(squareArr);
+console.log(sArr);
