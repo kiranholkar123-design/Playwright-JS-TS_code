@@ -42,3 +42,19 @@ console.log(Array.isArray(result));
 
 
 
+console.log('======================');
+let arr = [12, 13, 14, 15, [16, 17, [21, 22], 24, 25], 34, 56];
+
+function flattenArray(newArr) {
+    let tempArr = [];
+    for (let num of newArr) {
+        if (Array.isArray(num)) {
+            tempArr.push(...flattenArray(num))
+        } else {
+            tempArr.push(num)
+        }
+    }
+    return tempArr;
+}
+
+console.log(flattenArray(arr));
