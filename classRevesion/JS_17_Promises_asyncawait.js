@@ -55,3 +55,19 @@ async function makeCoffee() {
 }
 
 makeCoffee();
+
+console.log('================');
+
+function user(username) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve(username)
+        }, 3000);
+    })
+}
+
+async function helloUser(username) {
+    console.log(`Hello ${await user(username)}`);
+}
+
+helloUser('Kiran')
