@@ -127,3 +127,17 @@ let add = myCal(10, 40, function (a, b) {
     return a + b
 })
 console.log(add);
+
+
+console.log('===========================');
+//call back with normal function
+
+function sum(x, y) {
+    return x + y
+}
+
+function cal(x, y, callback) {
+    return callback(x, y);
+}
+
+console.log(cal(34, 56, sum));

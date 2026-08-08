@@ -14,12 +14,47 @@ function grindTheBeans(callback) {
     }, 3000)
 }
 
-function boilwater() {
+function boilwater(callback) {
     setTimeout(() => {
         console.log('Boiling the water');
-        //callback();
+        callback();
     }, 3000)
 }
+
+function brewTheCoffee(callback) {
+    setTimeout(() => {
+        console.log('Brew the coffee');
+        callback()
+    }, 2000)
+}
+
+function poringTheCoffee(callback) {
+    setTimeout(() => {
+        console.log('Poring the coffee');
+        callback()
+    }, 2000);
+}
+
+function coffeeIsReady() {
+    console.log('your coffe is ready');
+}
+
+
+startTheMachine(() => {
+    grindTheBeans(() => {
+        boilwater(() => {
+            brewTheCoffee(() => {
+                poringTheCoffee(
+                    coffeeIsReady
+                )
+            })
+        })
+    })
+})
+
+
+
+console.log('-----------------------------------------------');
 
 startTheMachine(() => {
     grindTheBeans(boilwater)
