@@ -1,4 +1,9 @@
 // Template literals - string using back tick
+/**
+ * tamplet literals are string literals enclosed in back tick
+ * it support the string interpolation/ embedded expressions
+ * it support multi line string formatting with out any special charecters
+ */
 
 let name = 'Kiran Holkar';
 console.log(`Hello, ${name}`); // embedded variables
